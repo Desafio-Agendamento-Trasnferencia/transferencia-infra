@@ -1,0 +1,24 @@
+services:
+  frontend:
+    image: jonathancarvalho039/app-transferencia:latest
+    container_name: frontend
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    image: jonathancarvalho039/api-transferencia:latest
+    container_name: backend
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
