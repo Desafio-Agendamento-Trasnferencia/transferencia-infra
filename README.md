@@ -40,4 +40,4 @@ docker-compose up -d
 
 - O frontend usa Vue.js e Nginx; o arquivo nginx.conf garante que todas as rotas do SPA funcionem corretamente mesmo após refresh.
 - O backend é uma aplicação Java 11 (Spring Boot) e está configurado para aceitar conexões externas.
-- Ambos os serviços estão na mesma rede Docker para que o frontend possa se comunicar com o backend usando http://backend:8080.
+- Ambos os serviços estão na mesma rede Docker para que o frontend possa se comunicar com o backend usando http://localhost:8080.
